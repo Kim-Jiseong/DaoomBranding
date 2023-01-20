@@ -3,7 +3,7 @@ import * as M from "pages/components/animation";
 import { motion } from "framer-motion";
 
 export const MainContainer = styled.div`
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   margin-bottom: 4rem;
   padding: 6rem;
   width: 100%;

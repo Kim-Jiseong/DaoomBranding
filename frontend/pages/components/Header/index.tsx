@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import * as S from "styles/components/header/style";
 import Fade from "react-awesome-reveal";
-export default function Header(props: { isMobile: boolean }) {
+export default function Header(props: {
+  isMobile: boolean;
+  initialColor: boolean;
+}) {
   const [click, setClick] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [fullscreen, setFullscreen] = useState<number>();
@@ -23,12 +26,24 @@ export default function Header(props: { isMobile: boolean }) {
   return (
     <div>
       {fullscreen && (
-        <S.HeaderContainer scroll={scrollPosition > fullscreen ? true : false}>
+        <S.HeaderContainer
+          scroll={
+            scrollPosition > fullscreen || props.initialColor ? true : false
+          }
+        >
           {/* {props.isMobile && ( */}
           <S.HeaderWrapper>
             <div style={{ width: "5rem" }}></div>
             <S.Logo
-              color={scrollPosition > fullscreen ? "black" : "transparent"}
+              color={
+                scrollPosition > fullscreen || props.initialColor
+                  ? "black"
+                  : "transparent"
+              }
+              click={click}
+              onClick={() => {
+                router.push("/");
+              }}
             >
               DAOOM
             </S.Logo>
@@ -38,7 +53,11 @@ export default function Header(props: { isMobile: boolean }) {
                 console.log(click);
               }}
               click={click}
-              color={scrollPosition > fullscreen ? "black" : "white"}
+              color={
+                scrollPosition > fullscreen || props.initialColor
+                  ? "black"
+                  : "white"
+              }
             >
               <span></span>
               <span></span>
@@ -48,14 +67,26 @@ export default function Header(props: { isMobile: boolean }) {
           {/* )} */}
 
           <S.HeaderPage click={click}>
-            <S.MenuContainer isMobile={props.isMobile}>
-              <Fade cascade={true}>
-                <div>Detail</div>
-                <div>Story</div>
-                <div>Detail</div>
-                <div>Detail</div>
-              </Fade>
-            </S.MenuContainer>
+            {click && (
+              <S.MenuContainer isMobile={props.isMobile}>
+                <div
+                  onClick={() => {
+                    router.push("/story");
+                  }}
+                >
+                  Story
+                </div>
+                <div>Signature Image</div>
+                <div
+                  onClick={() => {
+                    router.push("/detail");
+                  }}
+                >
+                  Detail
+                </div>
+                <div>Contact</div>
+              </S.MenuContainer>
+            )}
           </S.HeaderPage>
         </S.HeaderContainer>
       )}

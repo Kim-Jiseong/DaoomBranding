@@ -38,7 +38,7 @@ function Slick() {
   };
   return (
     <S.MainContainer>
-      <p style={{ fontSize: "2rem" }}>Signature Line</p>
+      {/* <p style={{ fontSize: "2rem" }}>Signature Line</p> */}
       <Slider {...settings}>
         <S.ElementWrapper>
           <S.ImageWrapper>

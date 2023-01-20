@@ -19,7 +19,7 @@ function Index() {
   if (!loading) {
     return (
       <div>
-        <Header isMobile={isMobile}></Header>
+        <Header isMobile={isMobile} initialColor={false}></Header>
         <S.MainContainer>
           <S.MainTextContainer>
             <S.MainTextWrapper>
@@ -68,6 +68,7 @@ function Index() {
             {/* <img src="https://images.unsplash.com/photo-1618828729232-347c3160c820?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" /> */}
           </S.Sticky>
         </S.StickyContainer>
+        <S.ContentTitle>Signature Line</S.ContentTitle>
         <Slick></Slick>
         <S.YB></S.YB>
         <Footer></Footer>

@@ -15,7 +15,7 @@ export const Container = styled.div`
   min-height: 100vh;
   overflow: hidden;
   margin: 0 auto;
-  font-family: "Noto Serif KR", serif;
+  /* font-family: "Noto Serif KR", serif; */
 `;
 
 export const MainBanner = styled.div`
@@ -45,7 +45,7 @@ export const TitleWrapper = styled.div`
 `;
 export const Title = styled.div`
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 400;
   white-space: nowrap;
 `;
 export const SubTitle = styled.div`
@@ -174,7 +174,7 @@ export const ProductPhoto = styled.img`
   object-fit: cover;
 `;
 export const ProductText = styled.div`
-  font-family: "Alice", sans-serif;
+  /* font-family: "Alice", sans-serif; */
   margin-bottom: 5rem;
   font-size: 1.8rem;
 `;

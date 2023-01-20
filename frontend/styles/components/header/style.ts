@@ -11,7 +11,7 @@ const SlideUp = keyframes`
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.div<{ click: boolean }>`
   font-size: 2.8rem;
   color: #252525;
   text-align: center;
@@ -21,6 +21,12 @@ export const Logo = styled.div`
   cursor: pointer;
   transition: 0.5s;
   color: ${(props) => props.color};
+  z-index: 3;
+  ${(props) =>
+    props.click &&
+    css`
+      color: white;
+    `}
 `;
 export const HeaderContainer = styled.div<{ scroll: boolean }>`
   width: 100%;
@@ -70,6 +76,11 @@ export const HamburgerContainer = styled.div<{ click: boolean }>`
     background-color: ${(props) => props.color};
     border-radius: 4px;
     transition: all 0.4s;
+    ${(props) =>
+      props.click &&
+      css`
+        background-color: white;
+      `}
   }
   & span:nth-of-type(1) {
     top: 0;
@@ -120,7 +131,7 @@ export const HeaderPage = styled.div<{ click: boolean }>`
     `}
 `;
 export const MenuContainer = styled.div<{ isMobile: boolean }>`
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   height: auto;
   display: flex;
@@ -129,7 +140,9 @@ export const MenuContainer = styled.div<{ isMobile: boolean }>`
   justify-content: space-between;
   align-items: center;
   color: white;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
+  opacity: 0;
+  animation: ${SlideUp} 1s 0.5s forwards;
   ${(props) =>
     props.isMobile &&
     css`
@@ -137,46 +150,6 @@ export const MenuContainer = styled.div<{ isMobile: boolean }>`
       height: 40vh;
     `}
   & div {
-    animation: ${SlideUp} 1s 5s;
     cursor: pointer;
-  }
-`;
-export const MenuWrapper = styled.div`
-  height: auto;
-  display: flex;
-  align-items: center;
-  margin-right: 10rem;
-  color: #252525;
-`;
-export const HeaderComponents = styled.div`
-  margin-left: 2rem;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 200%;
-  display: flex;
-  cursor: pointer;
-`;
-export const PageComponents = styled(HeaderComponents)`
-  font-size: 3.6rem;
-  &:hover {
-    color: #495057;
-  }
-`;
-
-export const PageWrapper = styled.div`
-  height: 30vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s;
-  & div {
-    ${(props) =>
-      props.click &&
-      css`
-        animation: ${SlideUp} 1.5s forwards;
-
-        color: white;
-      `}
   }
 `;

@@ -125,6 +125,12 @@ export const TextWrapper = styled.div`
     position: absolute;
   }
 `;
+
+export const ContentTitle = styled.div`
+  width: 100%;
+  padding: 6rem 6rem 0rem 6rem;
+  font-size: 2rem;
+`;
 export const YB = styled.div`
   height: 10rem;
 `;

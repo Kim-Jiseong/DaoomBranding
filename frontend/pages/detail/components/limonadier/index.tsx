@@ -8,7 +8,7 @@ import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Limonadier() {
+function Limonadier(props: { isMobile: boolean }) {
   useEffect(() => {
     AOS.init();
   });
@@ -116,7 +116,7 @@ function Limonadier() {
           </S.TitleWrapper>
           <S.Xline data-aos="fade-right"></S.Xline>
         </S.TitleContainer>
-        <S.ProductContainer>
+        {/* <S.ProductContainer>
           <S.Productitem>
             <S.ProductPhoto src={limonadierObject.src}></S.ProductPhoto>
             <S.ProductText>Limonadier</S.ProductText>
@@ -137,7 +137,7 @@ function Limonadier() {
             <S.ProductPhoto src={limonadierObject.src}></S.ProductPhoto>
             <S.ProductText>Limonadier</S.ProductText>
           </S.Productitem>
-        </S.ProductContainer>
+        </S.ProductContainer> */}
       </S.Container>
     </div>
   );
