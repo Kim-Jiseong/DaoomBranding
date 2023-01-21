@@ -20,7 +20,7 @@ function Limonadier(props: { isMobile: boolean }) {
       </S.MainBanner>
       <S.Container>
         <S.TitleContainer>
-          <S.Xline data-aos="fade-left"></S.Xline>
+          <S.Xline></S.Xline>
           <S.TitleWrapper data-aos="fade-up">
             <S.SubTitle>부드럽게 청량한 레몬 칵테일</S.SubTitle>
             <S.Title>Limonadier</S.Title>
