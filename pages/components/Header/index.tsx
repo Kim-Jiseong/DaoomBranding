@@ -76,7 +76,13 @@ export default function Header(props: {
                 >
                   Story
                 </div>
-                <div>Signature Image</div>
+                <div
+                  onClick={() => {
+                    router.push("/signature");
+                  }}
+                >
+                  Signature Image
+                </div>
                 <div
                   onClick={() => {
                     router.push("/detail");

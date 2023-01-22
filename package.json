@@ -2,18 +2,15 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kim-jiseong.github.io/DaoomBrandingFrontend",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "gh-pages -d build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@next/font": "13.1.1",
     "@react-spring/parallax": "^9.6.1",
-    "@svgr/webpack": "^6.5.1",
     "@types/aos": "^3.0.4",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
@@ -36,6 +33,6 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "@svgr/webpack": "^6.5.1"
   }
 }

@@ -13,12 +13,6 @@ const nextConfig = {
     return config;
   },
 };
-module.exports = {
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "https://kim-jiseong.github.io/DaoomBrandingFrontend"
-      : "",
-};
 // module.exports = {
 //   images: {
 //     domains: ["images.unsplash.com"],

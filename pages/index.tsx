@@ -23,8 +23,7 @@ function Index() {
         <S.MainContainer>
           <S.MainTextContainer>
             <S.MainTextWrapper>
-              <span>DAOOM</span>
-              <span>perfume</span>
+              <span>DAOOM</span> <span>perfume</span>
             </S.MainTextWrapper>
           </S.MainTextContainer>
           <img src="https://images.unsplash.com/photo-1544468266-6a8948003cd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80" />
